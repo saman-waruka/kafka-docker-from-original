@@ -4,6 +4,8 @@ services:
     image: wurstmeister/zookeeper
     ports:
       - 2181:2181
+    volumes:
+      - ./zookeeper_data:/data
   kafka:
     build: .
     ports:
